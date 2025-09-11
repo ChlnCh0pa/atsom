@@ -1,11 +1,6 @@
 import cv2
 def read():
     video = cv2.VideoCapture(0)
-    video.set(cv2.CAP_PROP_BRIGHTNESS, 0.27)
-    video.set(cv2.CAP_PROP_FRAME_WIDTH, 140)
-    video.set(cv2.CAP_PROP_FRAME_HEIGHT, 50)
-    video.set(cv2.CAP_PROP_SATURATION, 0.5)
-    video.set(cv2.CAP_PROP_CONTRAST, 0.5)
     ok, img = video.read()
     w = int(video.get(cv2.CAP_PROP_FRAME_WIDTH) )
     h = int(video.get(cv2.CAP_PROP_FRAME_HEIGHT) )
