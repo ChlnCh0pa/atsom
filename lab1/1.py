@@ -1,11 +1,11 @@
 import cv2
 def read():
-    video = cv2.VideoCapture(0)
+    video = cv2.VideoCapture("C:/Users/123/Desktop/acom/l1/video_dlya_video.avi")
     ok, img = video.read()
     w = int(video.get(cv2.CAP_PROP_FRAME_WIDTH) )
     h = int(video.get(cv2.CAP_PROP_FRAME_HEIGHT) )
     fourcc = cv2.VideoWriter_fourcc(*'XVID')
-    video_writer = cv2.VideoWriter("output.avi", fourcc, 25, (w, h))
+    video_writer = cv2.VideoWriter("video_iz_video.avi", fourcc, 25, (w, h))
     while (True):
         ok, img = video.read()
         cv2.imshow('CAM', img)
